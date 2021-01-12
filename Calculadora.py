@@ -54,12 +54,48 @@ opciones = float(input('Calculadora de Temperatura =     ("0")\nCalculadora de L
 print(Separador)
 
 ###Calculadora de Temperatura
+###Ya acabe con las conversiones de temperatura 
 while opciones <= 2:
+
     if opciones == 0:
        
         print (Calculadora_Temperatura)
-        opcionesTemperatura = int(input('Convertir: ºF a ºC___________("0") \nConvertir: '))
-        print("Calculadora de Temperatura")
+        opcionesTemperatura = int(input('Convertir: ºF a ºC___________("0")\nConvertir: ºC a ºF___________("1")\nConvertir: ºF a ºK___________("2")\nConvertir: ºK a ºF___________("3")\nConvertir: '))
+        print (Separador)
+
+        while opcionesTemperatura <= 3:
+            if opcionesTemperatura == 0:
+
+                F= float(input("Fahrenheit_a_Celsius..."))
+                C= (F-32)/18
+                print (C)
+
+                break
+
+            elif opcionesTemperatura == 1:
+               
+                C = float(input("Celsius_a_Fahrenheit: "))
+                F = (1.8*C) + 32
+                print (F)
+                
+                break
+
+            elif opcionesTemperatura == 2:
+
+                F = float(input("Fahrenheit_a_Kelvin: "))
+                K = (F + 459.67)/1.8
+                print (K)
+
+                break
+
+            elif opcionesTemperatura == 3:
+
+                K = float(input("Kelvin_a_Fahrenheit: "))
+                F = (9/5)*K - 459.67
+                print(F)
+
+                break
+
         break
 
     elif opciones == 1:
