@@ -96,15 +96,25 @@ PesoPlaneta = ("""
 """)
 
 ###Definir que quiere hacer el usuario
+
+###Las lineas a continuacion imprimen las caligrafias que estan definidas en las variables:
+###Calculadora_Magica; Calculadora_Calorias; Calculadora_Porcentaje; Calculadora_Temperatura
+
 print(Calculadora_Magica)
+###la variable "opciones" es igual al tipo de dato "float" (numero con decimales) y dentro de ese float
+###utiliza una funcion llamada "input" la cual es la que nos permite tener la entrada del usuario
 opciones = float(input('Calculadora de Temperatura =     ("0")\nCalculadora de Calorias    =     ("1")\nCalcula el Porcentaje      =     ("2")\nTu peso en otro Planeta    =     ("3")\nCual eliges________________=     '))
+
+###Aqui podemos observar lo que es la concatenacion en Python usamos la ',' para unir variables o numeros y Strings
 print("\n",Separador)
 
 ###Calculadora de Temperatura
-###Ya acabe con las conversiones de temperatura
+###Aqui comienza las condicionales recuerda "if, elif, else"
+###Son las formas basicas de condicionales "si (if),tambien (elif), sino(else)"
 if opciones == 0:
 
     print (Calculadora_Temperatura)
+    ###Al igual que con la variable "opciones" aqui pasa lo mismo (Dato curioso dentro de las comillas "\n"-> Salto de linea)
     opcionesTemperatura = int(input('Convertir: ºF a ºC___________("0")\nConvertir: ºC a ºF___________("1")\nConvertir: ºF a ºK___________("2")\nConvertir: ºK a ºF___________("3")\nConvertir: '))
     print ("\n",Separador)
 
@@ -112,39 +122,43 @@ if opciones == 0:
     if opcionesTemperatura == 0:
 
         F= float(input("Fahrenheit_a_Celsius: "))
+        ###La variable "C" tiene asignado un proceso matematico, no es necesario que el usuario vea este proceso
+        ###para eso tenemos la variable "result" que se encarga de tener el resultado mas el nombre de la medida que se esta usando
         C= (F-32)/18
-        nombre = C
+        result = C, ' Celsius'
 
 
     elif opcionesTemperatura == 1:
 
         C = float(input("Celsius_a_Fahrenheit: "))
         F = (1.8*C) + 32
-        nombre = F
+        result = F, ' Fahrenheit'
 
 
     elif opcionesTemperatura == 2:
 
         F = float(input("Fahrenheit_a_Kelvin: "))
         K = (F + 459.67)/1.8
-        nombre = K
+        result = K, ' Kelvin'
 
 
     elif opcionesTemperatura == 3:
 
         K = float(input("Kelvin_a_Fahrenheit: "))
         F = (9/5)*K - 459.67
-        nombre = F
+        result = F, ' Fahrenheit'
 
 
-    print("\nLa cantidad es: ", nombre)
+    print("\nLa cantidad es: ", result)
 
 
 elif opciones == 1:
 
     print (Calculadora_Calorias)
-    #Colocar la caligrafia en la parte superior
 
+    ###La formula para conseguir la respuesta es la siguiente
+    ###Mujer = (10 * pesoKg) + (6.25 * estaturaCM) - (5 * edadAños) - 161
+    ###Hombre = (10 * pesoKg) + (6.25 * estaturaCM) - (5 * edadAños) + 5
     Peso = float(input("\nCual es tu peso en KG?        "))
     Estatura = float(input("Cual es tu altura en CM?      "))
     Edad = float(input("Cual es tu edad?              "))
@@ -157,8 +171,6 @@ elif opciones == 1:
 
     Mujer = ValorTotal - 161
     Hombre = ValorTotal + 5
-
-    Sedentario = Hombre * 1.2
 
     print("\n",Separador)
 
@@ -194,11 +206,15 @@ elif opciones == 1:
 
 elif opciones == 2:
 
-    #Añadir caligrafias
     print (Calculadora_Porcentaje)
 
+    ###Las variables son abreviaciones
+    ###primva (primer valor)
+    ###porcen (porcentaje)
     primva = float(input("Ingresa el valor del cual quieres saber su porcentaje =        "))
     porcen = float(input("Ingresa el porcentaje que quieres saber               =        "))
+    ###Aqui tienes la formula de como se realizaria el calculo del porcentaje, es una regla de 3
+    ###Aqui descubrimos la reasignacion de variables no recomendada cuando se inicia en la programacion
     primva = (primva*porcen)/100
     print("\nEl porcentaje es: ", primva)
 
@@ -211,6 +227,7 @@ elif opciones == 3:
     tuPlaneta = float(input('\nMarte    =   ("1")\nMercurio =   ("2")\nUrano    =   ("3")\nNeptuno  =   ("4")\nSaturno  =   ("5")\nJupiter  =   ("6")\nEleccion: '))
     print(Separador)
 
+    ###Estas son las gravedades en los diferentes planetas g_Planeta m/s²
     g_Marte = 3.71
     g_Mercurio = 3.70
     g_Urano = 8.69
@@ -244,7 +261,7 @@ elif opciones == 3:
         nombre = "Jupiter"
 
     pesoFinal = (tuPeso*Planeta)/g_Tierra
-    print(pesoFinal) 
+    print("Tu peso en ", nombre, " es de: ", pesoFinal)
 
 else:
 
