@@ -124,7 +124,7 @@ if opciones == 0:
         F= float(input("Fahrenheit_a_Celsius: "))
         ###La variable "C" tiene asignado un proceso matematico, no es necesario que el usuario vea este proceso
         ###para eso tenemos la variable "result" que se encarga de tener el resultado mas el nombre de la medida que se esta usando
-        C= (F-32)/18
+        C= (F-32)*(5/9)
         result = C, ' Celsius'
 
 
