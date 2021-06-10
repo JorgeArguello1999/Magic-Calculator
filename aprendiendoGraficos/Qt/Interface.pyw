@@ -1,6 +1,6 @@
 import sys #Acceso a las opciones del sistema
 import ctypes #Geometrias del Sistema Operativo
-from PyQt5.QtWidgets import QApplication, QMainWindow 
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox 
 from PyQt5 import uic #Para procesar el diseño de QtDesigner
 from PyQt5.QtGui import QFont #Importa las fuenters
 from PyQt5.QtCore import Qt
@@ -39,7 +39,30 @@ class Ventana(QMainWindow):
         self.setFont(qfont)
 
         #Para asignar colores se puede usar css
+        self.boton_Start.setStyleSheet("background-color: black; color: #fff; font-size 14")
 
+        #Como modificar objetos en especifico
+        #self.nombre_del_objeto.Funcion()
+
+        #Evento para mensaje de bienvenida
+        def showEvent(self, event):
+            self.StartedMessage.setText("Como estas?")
+
+        #Evento para cuando se cierre el programa
+        def closeEvent(self, event):
+            resultado = QMessageBox.question(self, "Salir....", "Muchas gracias por usar la aplicacion.\nCreada por Jorge Arguello\nUnidad Educativa Pompeya\nPrimero Bachillerato Sistemas", QMessageBox.Yes | QMessageBox.No)
+            
+            """Tengo que usar un Desktop porque en Qtile no mata la aplicacion no la cierra del todo"""
+            #Aqui se decide lo que a presiona el usuario
+            if resultado == QMessageBox.Yes:
+                event.acept()
+
+            #Si el usuario presina no pues no sales del programa
+            else:
+                event.ignore()
+
+
+       
 
 
 #Instancia para iniciar el programa

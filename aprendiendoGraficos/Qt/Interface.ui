@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>698</width>
-    <height>473</height>
+    <width>510</width>
+    <height>409</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="boton_Start">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>130</y>
+      <x>140</x>
+      <y>100</y>
       <width>231</width>
       <height>131</height>
      </rect>
@@ -26,11 +26,27 @@
     <property name="maximumSize">
      <size>
       <width>500</width>
-      <height>16777215</height>
+      <height>500</height>
      </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Boton</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="StartedMessage">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>250</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bienvenido</string>
     </property>
    </widget>
   </widget>
@@ -39,7 +55,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>698</width>
+     <width>510</width>
      <height>18</height>
     </rect>
    </property>
