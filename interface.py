@@ -1,8 +1,9 @@
 import tkinter
 import C_temperatura
+from tkinter import Label
 
 ventana = tkinter.Tk()
-ventana.geometry('500x500')
+ventana.geometry('500x300')
 
 #Nombre de la ventana
 ventana.title('Calculadora Magica')
@@ -10,6 +11,10 @@ ventana.title('Calculadora Magica')
 #Encabezado de la aplicacion
 texto = tkinter.Label(ventana, text = 'Calculadora Magica')
 texto.pack()
+
+#Intenton de colocar una imagen en el menu principal
+imagen = tkinter.PhotoImage(file = 'Banner.png')
+Label(ventana, image = imagen, bd = 0).pack(side = 'left')
 
 def eleccion(numero):
     print(numero)

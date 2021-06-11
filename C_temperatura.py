@@ -1,16 +1,19 @@
 import tkinter
-from tkinter import ttk
+from tkinter import Image, ttk
+from tkinter import Label
 
-import formulas 
+import form 
 
 def ventanita():
     ventana = tkinter.Tk()
-    ventana.geometry('500x500')
+    ventana.geometry('500x300')
     
     #Titulo de la ventana
     ventana.title('Calculadora de Temperatura')
-#Encabezado titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura') titulo.pack()
-
+    #Encabezado 
+    titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura') 
+    titulo.pack()
+    
     #Nombre de la Entrada
     subtitle = tkinter.Label(ventana, text = 'Ingresa el Numero y Posteriormente')
     subtitle.pack()
@@ -22,31 +25,49 @@ def ventanita():
     
     #Funcion para el redireccionamiento de las opciones
     def selector(seleccion):
-        
+
         #Aqui se usa el modulo correspondiente dependiendo la opcion elegida
         if seleccion == 0:
             print("fc")
-            formulas.f_c()
+            salida = confirm(0)
+            salida = form.f_c(salida)
+            return salida
 
         elif seleccion == 1:
             print("cf")
+            salida = confirm(1)
+            salida = form.c_f(salida)
+            print(salida)
+            return salida
 
         elif seleccion == 2:
             print("fk")
+            salida = confirm(2)
+            salida = form.f_k(salida)
+            print(salida)
+            return salida
 
         elif seleccion == 3:
             print("kf")
+            salida = confirm(3)
+            salida = form.k_f(salida)
+            print(salida)
+            return salida
 
     #La entrada del recuadro
     def confirm(num):
+
         #Subtitulo para la respuesta
-        texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
-        texres.pack()
+        #texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
+        #texres.pack()
 
         #Respuesta de la operacion
         texto = entrada.get()
-        respuesta = tkinter.Label(ventana, text = texto)
+        respuesta = tkinter.Label(ventana, text ='') 
         respuesta.pack()
+
+        #Retorna la variable que almacena los datos de la entrada
+        return texto
 
     #Fahrenheit a Celsius
     F_C = tkinter.Button(ventana, text = 'Fahrenheit a Celsius', command = lambda : selector(0))
@@ -65,5 +86,5 @@ def ventanita():
     K_F.pack()
 
     #Envio de datos
-    sent = tkinter.Button(ventana, text = 'Procesar', command = lambda : confirm(0))
-    sent.pack()
+    #sent = tkinter.Button(ventana, text = 'Procesar', command = lambda : confirm(0))
+    #sent.pack()
