@@ -103,5 +103,3 @@ def k_f(entrada):
     respuesta.pack()
     texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
     texres.pack()
-
-
