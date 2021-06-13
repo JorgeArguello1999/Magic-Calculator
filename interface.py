@@ -1,6 +1,11 @@
 import tkinter
-import C_temperatura
 from tkinter import Label
+from tkinter import Image, ttk
+
+#Importamos los modulos
+import C_temperatura
+import C_calorias
+
 
 ventana = tkinter.Tk()
 ventana.geometry('500x300')
@@ -21,11 +26,14 @@ def eleccion(numero):
     if numero == 1:
         print("Calculadora de Temperatura")
 
-        #Llammos al modulo de C_Temperatura
+        #Llammos al modulo de C_temperatura
         C_temperatura.ventanita()
         
     if numero == 2:
         print("Calculadora de Calorias")
+
+        #Llamamos al modulo de C_calorias
+        C_calorias.ventana()
 
     if numero == 3:
         print ("Calculadora de Porcentaje")

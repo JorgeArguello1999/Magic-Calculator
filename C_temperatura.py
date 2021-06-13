@@ -55,19 +55,19 @@ def ventanita():
             return salida
 
     #La entrada del recuadro
-    def confirm(num):
+  #  def confirm(num):
 
         #Subtitulo para la respuesta
         #texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
         #texres.pack()
 
         #Respuesta de la operacion
-        texto = entrada.get()
-        respuesta = tkinter.Label(ventana, text ='') 
-        respuesta.pack()
+ #       texto = entrada.get()
+        #respuesta = tkinter.PhotoImage(file = 'Transformaciones.png')
+        #Label(ventana, image = respuesta, bd =0).pack(side = 'left')
 
         #Retorna la variable que almacena los datos de la entrada
-        return texto
+#        return texto
 
     #Fahrenheit a Celsius
     F_C = tkinter.Button(ventana, text = 'Fahrenheit a Celsius', command = lambda : selector(0))
