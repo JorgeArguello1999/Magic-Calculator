@@ -43,7 +43,7 @@ def ventana():
         print(resultado)
 
         ventanita = tkinter.Tk()
-        ventanita.geometry('300x100')
+        ventanita.geometry('300x500')
         ventanita.title('Respuesta')
 
         #titulo

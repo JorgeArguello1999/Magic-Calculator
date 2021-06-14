@@ -81,7 +81,7 @@ def ventana():
 
             #Creamos la ventana
             ventana = tkinter.Tk()
-            ventana.geometry('300x100')
+            ventana.geometry('300x500')
 
             #Titulo de la ventana
             titulo = tkinter.Label(ventana, text = 'Calculadora de Calorias')
@@ -105,7 +105,7 @@ def ventana():
 
             #Creamos la ventana
             ventana = tkinter.Tk()
-            ventana.geometry('300x100')
+            ventana.geometry('300x500')
             
             #Titulo de la ventana
             titulo = tkinter.Label(ventana, text = 'Calculadora de Calorias')
