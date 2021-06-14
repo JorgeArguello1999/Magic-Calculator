@@ -15,27 +15,36 @@ def ventana():
 
     #Titulo de la ventana
     ventana.title('Calculadora de Calorias')
-    
+
     #Encabezado 
     titulo = tkinter.Label(ventana, text = 'Calculadora de Calorias')
     titulo.pack
 
-    #Nombre de la Entrada de Datos
+    #Recuadro de la entrada del peso 
     subtitle = tkinter.Label(ventana, text = 'Ingrese su peso en KiloGramos (Kg)')
     subtitle.pack()
 
-    #Recuadro de la entrada del peso 
     peso= tkinter.Entry(ventana)
     peso.focus()
     peso.pack()
 
     #Entrada de Datos de altura
+    subtitle1 = tkinter.Label(ventana, text = 'Ingrese su Altura en CentiMetros (Cm)')
+    subtitle1.pack()
+
     altura = tkinter.Entry(ventana)
     altura.pack()
 
     #Entrada de Datos de Edad
+    subtitle1 = tkinter.Label(ventana, text = 'Ingrese su Edad en Años')
+    subtitle1.pack()
+
     edad = tkinter.Entry(ventana)
     edad.pack()
+
+    #Subtitulo para la eleccion de genero
+    subtitle2 = tkinter.Label(ventana, text = 'Selecciona tu Genero')
+    subtitle2.pack()
 
     #Boton para Genero Femenino
     femenino = tkinter.Button(ventana, text = 'Femenino', command = lambda : confirm(1))
@@ -72,12 +81,21 @@ def ventana():
 
             #Creamos la ventana
             ventana = tkinter.Tk()
-            ventana.geometry('300x200')
-            
+            ventana.geometry('300x100')
+
+            #Titulo de la ventana
+            titulo = tkinter.Label(ventana, text = 'Calculadora de Calorias')
+            titulo.pack()
+
+           
             ventana.title('Respuesta')
 
             texto = tkinter.Label(ventana, text = respuesta)
             texto.pack()
+
+            texto_fin = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
+            texto_fin.pack()
+
 
         elif num == 2:
             print('hombre')
@@ -87,12 +105,20 @@ def ventana():
 
             #Creamos la ventana
             ventana = tkinter.Tk()
-            ventana.geometry('300x200')
+            ventana.geometry('300x100')
             
+            #Titulo de la ventana
+            titulo = tkinter.Label(ventana, text = 'Calculadora de Calorias')
+            titulo.pack()
+
             ventana.title('Respuesta')
 
             texto = tkinter.Label(ventana, text = respuesta)
             texto.pack()
+
+            texto_fin = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
+            texto_fin.pack()
+
 
     #Boton para el envio de Datos
     #boton = tkinter.Button(ventana, text = 'Enviar Datos', command = confirm(0))

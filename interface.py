@@ -5,7 +5,7 @@ from tkinter import Image, ttk
 #Importamos los modulos
 import C_temperatura
 import C_calorias
-
+import C_porcentaje
 
 ventana = tkinter.Tk()
 ventana.geometry('500x300')
@@ -37,9 +37,9 @@ def eleccion(numero):
 
     if numero == 3:
         print ("Calculadora de Porcentaje")
-
-    if numero == 4:
-        print("Tu peso en Otro Planeta")
+        
+        #Llamamos al modulo de C_porcentaje 
+        C_porcentaje.ventana()
 
 boton1 = tkinter.Button(ventana, text = 'Calculadora de Temperatura', command = lambda: eleccion(1))
 boton1.pack()
@@ -49,8 +49,5 @@ boton2.pack()
 
 boton3 = tkinter.Button(ventana, text = 'Calculadora de Porcentaje', command = lambda: eleccion(3))
 boton3.pack()
-
-boton4 = tkinter.Button(ventana, text = 'Tu peso en Otro Planeta', command = lambda: eleccion(4))
-boton4.pack()
 
 ventana.mainloop()

@@ -15,7 +15,7 @@ def ventanita():
     titulo.pack()
     
     #Nombre de la Entrada
-    subtitle = tkinter.Label(ventana, text = 'Ingresa el Numero y Posteriormente')
+    subtitle = tkinter.Label(ventana, text = 'Ingresa el Numero y Posteriormente selecciona la medida que necesites')
     subtitle.pack()
 
     #Recuadro para la entrada de datos

@@ -6,8 +6,11 @@ def f_c(entrada):
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
     ventana.geometry('300x100')
-    ventana.config(bg = 'green')
     ventana.title('Respuesta')
+
+    #Titulo
+    titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura')
+    titulo.pack()
 
     #Vemos si el componente funciona correctamente 
     print("conectado: ")
@@ -24,7 +27,7 @@ def f_c(entrada):
     #Ventana de respuesta, aqui se ve la respuesta
     respuesta = tkinter.Label(ventana, text = c)
     respuesta.pack()
-    texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
+    texres = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
     texres.pack()
 
 def c_f(entrada):
@@ -32,8 +35,12 @@ def c_f(entrada):
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
     ventana.geometry('300x100')
-    ventana.config(bg = 'green')
     ventana.title('Respuesta')
+
+    #Titulo
+    titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura')
+    titulo.pack()
+
 
     #Vemos si el componente funciona correctamente 
     print("conectado: ")
@@ -50,7 +57,7 @@ def c_f(entrada):
     #Ventana de respuesta, aqui se ve la respuesta
     respuesta = tkinter.Label(ventana, text = f)
     respuesta.pack()
-    texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
+    texres = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
     texres.pack()
 
 def f_k(entrada):
@@ -58,8 +65,12 @@ def f_k(entrada):
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
     ventana.geometry('300x100')
-    ventana.config(bg = 'green')
     ventana.title('Respuesta')
+
+    #Titulo
+    titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura')
+    titulo.pack()
+
 
     #Vemos si el componente funciona correctamente 
     print("conectado: ")
@@ -76,15 +87,19 @@ def f_k(entrada):
     #Ventana de respuesta, aqui se ve la respuesta
     respuesta = tkinter.Label(ventana, text = k)
     respuesta.pack()
-    texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
+    texres = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
     texres.pack()
 
 def k_f(entrada):
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
     ventana.geometry('300x100')
-    ventana.config(bg = 'green')
     ventana.title('Respuesta')
+
+    #Titulo
+    titulo = tkinter.Label(ventana, text = 'Calculadora de Temperatura')
+    titulo.pack()
+
 
     #Vemos si el componente funciona correctamente 
     print("conectado: ")
@@ -101,5 +116,5 @@ def k_f(entrada):
     #Ventana de respuesta, aqui se ve la respuesta
     respuesta = tkinter.Label(ventana, text = f)
     respuesta.pack()
-    texres = tkinter.Label(ventana, text = 'Esta es el resultado de su transformacion')
+    texres = tkinter.Label(ventana, text = 'Muchas Gracias por Usar "Calculador Magica", creada por Jorge Arguello')
     texres.pack()
