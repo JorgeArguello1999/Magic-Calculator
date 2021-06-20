@@ -5,7 +5,7 @@ def f_c(entrada):
 
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
-    ventana.geometry('300x500')
+    ventana.geometry('500x300')
     ventana.title('Respuesta')
 
     #Titulo
@@ -34,7 +34,7 @@ def c_f(entrada):
     
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
-    ventana.geometry('300x500')
+    ventana.geometry('500x300')
     ventana.title('Respuesta')
 
     #Titulo
@@ -64,7 +64,7 @@ def f_k(entrada):
     
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
-    ventana.geometry('300x500')
+    ventana.geometry('500x300')
     ventana.title('Respuesta')
 
     #Titulo
@@ -93,7 +93,7 @@ def f_k(entrada):
 def k_f(entrada):
     #Declaramos el lienzo y donde se va a ubicar el la respuesta
     ventana = tkinter.Tk()
-    ventana.geometry('300x500')
+    ventana.geometry('500x300')
     ventana.title('Respuesta')
 
     #Titulo
