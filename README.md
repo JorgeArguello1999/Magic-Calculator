@@ -23,7 +23,7 @@ This program have this functions:
    \[ F = (C x 1.8) + 32 \]
 
 4. Fahrenheit to Celsius (F -> C):
-   \[ C = (F - 32) \div 1.8 \]
+   \[ C = (F - 32) / 1.8 \]
 
 5. Kelvin to Fahrenheit (K -> F):
    \[ F = (K x 1.8) - 459.67 \]
@@ -41,12 +41,12 @@ working..
 
 ### For man
 ```math
-Result = (10 * peso en kg) + (6.25 * altura en cm) - (5 * edad en años) + 5
+Result = (10 * weight-on-Kg) + (6.25 * height-on-cm) - (5 * years-old) + 5
 ```
 
 ### For women
 ```math
-Result = (10 * peso en kg) + (6.25 * altura en cm) - (5 * edad en años) - 161
+Result = (10 * weight-on-Kg) + (6.25 * height-on-cm) - (5 * years-old) - 161 
 ```
 
 Then, you multiply the result obtained by a physical activity factor according to the amount of exercise you do per week:
@@ -59,6 +59,6 @@ Then, you multiply the result obtained by a physical activity factor according t
 ## Formula to calculate your weight on another planet
 The formula for calculate your wieight on another planet is this:
 
-```
+```math 
 Weight on planet = (Weight on Earth * Planetary Gravity) / Earth Gravity
 ```
