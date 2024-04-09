@@ -60,5 +60,5 @@ Then, you multiply the result obtained by a physical activity factor according t
 The formula for calculate your wieight on another planet is this:
 
 ```math 
-Weight on planet = (Weight on Earth * Planetary Gravity) / Earth Gravity
+Weight-on-planet = (Weight-on-Earth * Planetary-Gravity) / Earth-Gravity
 ```
