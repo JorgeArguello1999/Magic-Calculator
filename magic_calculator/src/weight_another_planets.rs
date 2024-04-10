@@ -40,7 +40,9 @@ pub fn list_planets_gravity(planet: Option<&str>) -> Option<f64> {
 /*
 Make the calculate
 */
-pub fn calculate_weight(weight:f64, planet:&str) -> i32 {
-    println!("{}, {}", weight, planet);
-    return 1;
+pub fn calculate_weight(weight:f64, planet:&str) -> f64{
+    let planet_gravity:f64 = list_planets_gravity(Some(planet)).unwrap_or(0.0);
+    let earth_gravity:f64 = list_planets_gravity(Some("Tierra")).unwrap_or(0.0);
+
+    return (weight * planet_gravity) / earth_gravity;
 }
