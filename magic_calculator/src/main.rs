@@ -62,5 +62,4 @@ fn main() {
     // Your weight on another planet
     calculate_weight_another_planets();
 
-
 }
