@@ -13,3 +13,11 @@ pub fn get_str_value() -> String {
     return input.trim().to_string()
 }
 
+/*
+pub fn get_bool_value() -> bool {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Error al leer la entrada");
+    let valor:bool = input.trim().parse().expect("Error messagge");
+    return valor;
+}
+*/
