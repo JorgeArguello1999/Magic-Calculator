@@ -26,11 +26,6 @@ fn calculate_caloric_expenditure() -> f64{
     println!("Please enter your genere, Male or Female: ");
     let genere_input:String = funcs::get_str_value();
 
-    let mut genere_output :bool = false;
-    if genere_input.to_lowercase() == "male"{
-        genere_output = true;
-    }
-
     // Weight input
     println!("Enter your weight (Kg): ");
     let weight_input:f64 = funcs::get_float_value();
@@ -45,7 +40,7 @@ fn calculate_caloric_expenditure() -> f64{
 
 
     let result:f64 = caloric_expenditure::calculate_caloric_expenditure(
-        genere_output, weight_input, height_input,years_input 
+        genere_input, weight_input, height_input,years_input 
     );
 
     println!("Your caloric expenditure is {}", result);
