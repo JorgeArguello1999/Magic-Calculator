@@ -21,3 +21,10 @@ pub fn get_bool_value() -> bool {
     return valor;
 }
 */
+
+pub fn get_int_value() -> i32 {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Error al leer la entrada");
+    let valor:i32 = input.trim().parse().expect("Error messagge");
+    return valor;
+}

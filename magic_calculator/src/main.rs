@@ -48,7 +48,7 @@ fn calculate_caloric_expenditure() -> f64{
         genere_output, weight_input, height_input,years_input 
     );
 
-    println!("Your caloric expenditure is {result}");
+    println!("Your caloric expenditure is {}", result);
 
     return result;
 }
@@ -56,10 +56,26 @@ fn calculate_caloric_expenditure() -> f64{
 fn main() {
     println!("Magic Calculator!");
 
-    // Your expenditure caloric
-    calculate_caloric_expenditure();
+    print!("
+    1.- Calculate Caloric Expenditure.
+    2.- Calculate Weight on Another Planets.
+    3.- Calculate Porcentage.
+    4.- Convertions of temperatures.
 
-    // Your weight on another planet
-    calculate_weight_another_planets();
+    Enter the option: 
+    ");
+
+    let input = funcs::get_int_value();
+
+    let result = match input {
+        1 => calculate_caloric_expenditure(),
+        2 => calculate_weight_another_planets(),
+        _ => {
+            println!("Error with your input");
+            0.0 // Return a default value of type f64
+        },
+    };
+
+    println!("Your choice: {}", result);
 
 }
