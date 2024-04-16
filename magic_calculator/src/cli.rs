@@ -1,10 +1,12 @@
+use crate::functions::porcentage::porcentage;
+
 // Basic Functions
 use super::funcs; 
 // Converts functions
 use super::functions::{
     caloric_expenditure, 
     weight_another_planets, 
-    conversion_temperatures
+    conversion_temperatures,
 };
 
 // Function to get your weight 
@@ -84,4 +86,18 @@ pub fn transform_temperatures() -> f64 {
 
     println!("The temperature convertion is: {}", result);
     result
+}
+
+
+pub fn calculate_porcentage() -> f64 {
+    println!("Enter the total value: ");
+    let total_value:f64 = funcs::get_float_value();
+
+    println!("Enter the value for know the porcentage: ");
+    let value:f64 = funcs::get_float_value();
+
+    let result:f64 = porcentage(value, total_value);
+    println!("The value ({value}) from total value ({total_value}) is: {result}");
+
+    return result;
 }

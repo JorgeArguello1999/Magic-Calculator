@@ -33,7 +33,9 @@ This program have this functions:
 
 
 ## Formula for percentage conversion
-working..
+```math
+Result = (Value/TotalValue) * 100 
+```
 
 ## Formula to calculate caloric expenditure
 

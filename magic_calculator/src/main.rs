@@ -6,6 +6,7 @@ mod functions {
     pub mod caloric_expenditure;
     pub mod weight_another_planets;
     pub mod conversion_temperatures;
+    pub mod porcentage;
 }
 
 use funcs::get_int_value;
@@ -13,7 +14,8 @@ use funcs::get_int_value;
 use cli::{
     calculate_caloric_expenditure, 
     calculate_weight_another_planets, 
-    transform_temperatures
+    transform_temperatures,
+    calculate_porcentage
 };
 
 fn main() {
@@ -33,12 +35,13 @@ fn main() {
     let result = match input {
         1 => calculate_caloric_expenditure(),
         2 => calculate_weight_another_planets(),
+        3 => calculate_porcentage(),
         4 => transform_temperatures(),
         _ => {
             println!("Error with your input");
             0.0 // Return a default value of type f64
         },
     };
+    print!("{}", result);
 
-    println!("Your result: {}", result);
 }
