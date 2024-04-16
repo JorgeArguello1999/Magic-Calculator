@@ -1,7 +1,17 @@
-mod weight_another_planets;
-mod caloric_expenditure;
-mod conversion_temperatures;
+// Functions basic
 mod funcs;
+
+// Module functions
+mod functions {
+    pub mod caloric_expenditure;
+    pub mod weight_another_planets;
+    pub mod conversion_temperatures;
+}
+
+// Make use
+use functions::caloric_expenditure;
+use functions::weight_another_planets;
+use functions::conversion_temperatures;
 
 // Function to get your weight 
 fn calculate_weight_another_planets() -> f64 {
