@@ -79,6 +79,9 @@ fn transform_temperatures() -> f64 {
             0.0 // Return a default value
         }
     };
+
+    println!("The temperature convertion is: {result}");
+
     return result;
 }
 
