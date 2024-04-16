@@ -45,8 +45,14 @@ pub fn calculate_caloric_expenditure() -> f64{
     println!("Enter your age (Years): ");
     let age_input:f64 = funcs::get_float_value();
 
+    // Days activity 
+    caloric_expenditure::list_activitys(0);
+    println!("Enter the days that you make activity: ");
+    let days_input:i32 = funcs::get_int_value();
+
     let result:f64 = caloric_expenditure::calculate_caloric_expenditure(
-        gender_input, weight_input, height_input, age_input 
+        gender_input, weight_input, height_input, age_input,
+        days_input 
     );
 
     println!("Your caloric expenditure is {}", result);
