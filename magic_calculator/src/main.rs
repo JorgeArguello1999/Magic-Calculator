@@ -1,5 +1,6 @@
 mod weight_another_planets;
 mod caloric_expenditure;
+mod conversion_temperatures;
 mod funcs;
 
 // Function to get your weight 
@@ -48,6 +49,39 @@ fn calculate_caloric_expenditure() -> f64{
     return result;
 }
 
+// Function to transform the temperatures
+fn transform_temperatures() -> f64 {
+    println!("
+    1.- Celsius to Kelvin (C -> K). 
+    2.- Kelvin to Celsius (K -> C).
+    3.- Celsius to Fahrenheit (C -> F).
+    4.- Fahrenheit to Celsius (F -> C).
+    5.- Kelvin to Fahrenheit (K -> F).
+    6.- Fahrenheit to Kelvin (F -> K).
+
+    Your input: 
+    ");
+
+    let input:i32 = funcs::get_int_value();
+
+    println!("Enter the value to transform: ");
+    let value:f64 = funcs::get_float_value();
+
+    let result = match input {
+        1 => conversion_temperatures::celsius_kelvin(value),
+        2 => conversion_temperatures::kelvin_celsius(value),
+        3 => conversion_temperatures::celsius_fahrenheit(value),
+        4 => conversion_temperatures::fahrenheit_celsius(value),
+        5 => conversion_temperatures::kelvin_fahrenheit(value),
+        6 => conversion_temperatures::fahrenheit_kelvin(value),
+        _ => {
+            println!("Invalid input");
+            0.0 // Return a default value
+        }
+    };
+    return result;
+}
+
 fn main() {
     println!("Magic Calculator!");
 
@@ -65,12 +99,13 @@ fn main() {
     let result = match input {
         1 => calculate_caloric_expenditure(),
         2 => calculate_weight_another_planets(),
+        4 => transform_temperatures(),
         _ => {
             println!("Error with your input");
             0.0 // Return a default value of type f64
         },
     };
 
-    println!("Your choice: {}", result);
+    println!("Your result: {}", result);
 
 }
